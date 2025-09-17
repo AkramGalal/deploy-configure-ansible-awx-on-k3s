@@ -34,6 +34,7 @@ sudo systemctl status k3s
 ```bash
 kubectl get nodes
 ```
+- K3s bundles its own container runtime by default. It uses containerd (lighter and faster).
 
 ### 3.
 
