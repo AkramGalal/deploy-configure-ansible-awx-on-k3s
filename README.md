@@ -56,10 +56,11 @@ git checkout 2.19.0
 sudo make deploy
 ```
 
-- Check AWX operator pod status. It shall be up and running.
+- Check the deployment status of AWX operator.
 ```bash
-sudo kubectl -n awx get pods
+sudo kubectl -n awx get all
 ```
+
 
 ### 4.
 
