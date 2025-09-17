@@ -2,7 +2,7 @@
 This project demonstrates how to deploy and configure AWX open-source version of Ansible Tower on a lightweight Kubernetes distribution (K3s).
 
 ## System Requirements:
-  - Linux VM (ubuntu) with 2 vCPUs and 8 GB RAM.  
+  - Linux Ubuntu VM with 2 vCPUs and 8 GB RAM.  
   - Docker/Containerd installed.
   - K3s installed.
   - kubectl configured to manage the K3s cluster.  
@@ -24,7 +24,37 @@ sudo apt upgrade -y
 ```bash
 curl -sfL https://get.k3s.io | sh -
 ```
--  Check for Ready node, takes ~30 seconds
+
+-  Check for Ready node
 ```bash 
 sudo k3s kubectl get node
 ```
+
+- Check K3s cluster status
+```bash
+sudo systemctl status k3s
+```
+
+- K3s installs kubectl automatically to alias it for convenience
+```bash
+alias kubectl='k3s kubectl'
+kubectl get nodes
+```
+
+- K3s stores its kubeconfig file at `/etc/rancher/k3s/k3s.yaml`. Copy this file to `~/.kube/config` to use the standard `kubectl` command:
+```bash
+mkdir -p ~/.kube
+sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+sudo chown $(id -u):$(id -g) ~/.kube/config
+```
+
+- Get the status of the nodes (by default, K3s creates one node acting as both control-plane and worker).
+```bash
+kubectl get nodes
+```
+
+### 3.
+
+
+### 4.
+
