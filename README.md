@@ -13,10 +13,9 @@ This project demonstrates how to deploy and configure AWX open-source version of
 - Ansible: Automation engine for configuration management and orchestration.
 
 ## Project Setup
-### 1. Create Ubuntu VM and update System Packages
+### 1. Create Ubuntu VM and Update System Packages
 ```bash
 sudo apt update -y
-sudo apt upgrade -y
 ```
 
 ### 2. Install K3s
