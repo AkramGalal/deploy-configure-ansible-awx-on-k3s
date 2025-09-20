@@ -1,0 +1,7 @@
+---
+- name: Test ping
+  hosts: all
+  tasks:
+    - name: Ping nodes
+      ansible.builtin.ping:
+...
