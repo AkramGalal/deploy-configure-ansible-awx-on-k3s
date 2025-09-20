@@ -10,7 +10,6 @@ This project demonstrates how to deploy and configure AWX open-source version of
 - AWX: Open-source Ansible UI.  
 - K3s: Lightweight Kubernetes distribution.
 - Ansible: Automation engine for configuration management and orchestration.
-
   
 ## Project Setup
 ## A) Deploy AWX on K3s Cluster
@@ -67,7 +66,6 @@ sudo apt install git make vim -y
   sudo kubectl -n awx get all
   ```
   <img width="1847" height="377" alt="Screenshot 2025-09-18 015009" src="https://github.com/user-attachments/assets/c134545b-141d-418b-9f18-b20f5e90251f" />
-
 
 ### 4. Create an AWX Instance Manifest
 - Create AWX deployment (instance) file.
@@ -177,7 +175,11 @@ sudo apt install git make vim -y
 
 ### 6. Launch Job and Check Execution Output
 - From AWX UI dashboard, choose Templates and luanch the required templates.
+  
   <img width="3808" height="1974" alt="Screenshot 2025-09-20 173141" src="https://github.com/user-attachments/assets/115ecbda-96e7-4765-8100-fc65da250444" />
 
-- Once the template is launched, the AWX UI will be directed automatically to Jobs --> Output section to visualize the results of the execution.
-- 
+- Once the template is launched, the AWX UI will be directed automatically to "Jobs --> Output" section to visualize the results of the execution.
+- AWX server can successfully ping all the nodes in the operational K8s cluster.
+
+  <img width="3819" height="1977" alt="Screenshot 2025-09-20 180228" src="https://github.com/user-attachments/assets/b6a0a278-a57b-471d-b787-33ec36aec9ab" />
+
