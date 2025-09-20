@@ -177,6 +177,7 @@ sudo apt install git make vim -y
 
 ### 6. Launch Job and Check Execution Output
 - From AWX UI dashboard, choose Templates and luanch the required templates.
-- 
-- Once the template is launched and completed, check the execution results from Jobs --> Output section.
+  <img width="3808" height="1974" alt="Screenshot 2025-09-20 173141" src="https://github.com/user-attachments/assets/115ecbda-96e7-4765-8100-fc65da250444" />
+
+- Once the template is launched, the AWX UI will be directed automatically to Jobs --> Output section to visualize the results of the execution.
 - 
