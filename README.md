@@ -180,6 +180,7 @@ sudo apt install git make vim -y
 
 - Once the template is launched, the AWX UI will be directed automatically to "Jobs --> Output" section to visualize the results of the execution.
 - AWX server can successfully ping all the nodes in the operational K8s cluster.
+  
+  <img width="3821" height="1971" alt="Screenshot 2025-09-20 193104" src="https://github.com/user-attachments/assets/2f917f8c-0615-4bc7-b1fe-70c78a196a29" />
 
-  <img width="3819" height="1977" alt="Screenshot 2025-09-20 180228" src="https://github.com/user-attachments/assets/b6a0a278-a57b-471d-b787-33ec36aec9ab" />
 
