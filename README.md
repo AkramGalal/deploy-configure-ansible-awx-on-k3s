@@ -135,7 +135,7 @@ sudo apt install git make vim -y
     ```bash
     sudo apt install python3
     ```
-- **Generate access keypair**:
+- **Generate access keypair**
   - Create public and private keys to allow AWX controller to access the managed nodes without password each time it connects to a host.
   - On AWX VM, generate the keypair and copy the public key to each managed node.
   - Replace <Node.IP> with the actual IP address of the managed node.
