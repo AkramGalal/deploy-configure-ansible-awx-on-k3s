@@ -158,6 +158,12 @@ sudo apt install git make vim -y
     
     <img width="3750" height="1964" alt="Screenshot 2025-09-20 152810" src="https://github.com/user-attachments/assets/8105bbff-1a77-45be-95d1-18907a034df0" />
 
-
-
 ### 4. Create AWX Project and Assign Playbook
+  - Create YAML file for the required playbook. In this project "ping_playbook.yml" is used to test the connectivity with the managed nodes.
+  - From AWX UI dashboard, choose Resources --> Projects to add new project.
+  - Select the "Source Control Type" to be Git and indicate the Source Control URL of repo.
+  - The AWX server will clone the remote repo under "/var/lib/awx/projects". This path is located on the AWX VM (server), or inside "awx-task" Pod in case AWX is deployed on K8s/K3s cluster.
+    
+    <img width="3811" height="1878" alt="Screenshot 2025-09-20 162421" src="https://github.com/user-attachments/assets/5f5dc2b1-94be-4a2f-8f5a-c1bcb8169295" />
+
+### 5. Create Template
