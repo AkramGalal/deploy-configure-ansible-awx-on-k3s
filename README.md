@@ -149,12 +149,13 @@ sudo apt install git make vim -y
 ### 2. Create Inventroy and Add Hosts
   - From AWX UI dashboard, choose Resources --> Inventories and create 'k8s-servers' Inventory.
   - After creating the inventory, create the hosts (managed nodes of the K8s cluster) and assign them to the created inventory. Grouping them is an option.
+    
     <img width="3811" height="1966" alt="Screenshot 2025-09-20 133600" src="https://github.com/user-attachments/assets/5f8dd14a-d4cb-472b-82bf-c1d09b02511c" />
 
 ### 3. Create Credential
   - From AWX UI dashboard, choose Resources --> Credentials to add new credential, i.e., the "ansible" user created on the managed nodes.
   - For "Credential Type", choose "Machine". This is the credentail type used to SSH nodes.
-  - For the username: ansible and upload the private key of the keypair generated in Step 1.
+  - For the username, write "ansible" and upload the private key of the keypair generated in Step 1.
     
     <img width="3750" height="1964" alt="Screenshot 2025-09-20 152810" src="https://github.com/user-attachments/assets/8105bbff-1a77-45be-95d1-18907a034df0" />
 
@@ -167,3 +168,15 @@ sudo apt install git make vim -y
     <img width="3811" height="1878" alt="Screenshot 2025-09-20 162421" src="https://github.com/user-attachments/assets/5f5dc2b1-94be-4a2f-8f5a-c1bcb8169295" />
 
 ### 5. Create Template
+- AWX template combines inventory, credential, project, and the playbook into a single definition.
+- From AWX UI dashboard, choose Resources --> Templates to create new job template.
+- Select the associated inventory, project, playbook and credentials.
+- Choose "Privilege Escalation" option to run this playbook as an administrator.
+
+  <img width="3824" height="1980" alt="Screenshot 2025-09-20 171705" src="https://github.com/user-attachments/assets/ba54e2f6-2aa1-445c-8609-540039f0d0e4" />
+
+### 6. Launch Job and Check Execution Output
+- From AWX UI dashboard, choose Templates and luanch the required templates.
+- 
+- Once the template is launched and completed, check the execution results from Jobs --> Output section.
+- 
